@@ -36,7 +36,8 @@ public class Main {
                 case"2":
                     System.out.println("Seleccione uno de los libros");
                     biblio.showCatalog();
-                    int posicion = sc.nextInt();
+                    Scanner scP = new Scanner(System.in);
+                    int posicion = scP.nextInt();
                     usuario.obtenerLibro(posicion, biblio);
                     break;
                 case "3":
@@ -49,7 +50,7 @@ public class Main {
                     System.out.println(usuario);
                     break;
                 case"5":
-                    System.out.println("Introduzca el título del libro que quiere devolver");
+                    System.out.println("Introduzca el numero del libro que quiere devolver");
                     System.out.println(usuario);
                     int libroParaDevolver = sc.nextInt();
                     String tituloLibro = usuario.obtenerTituloLibro(libroParaDevolver);
