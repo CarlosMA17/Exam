@@ -21,9 +21,9 @@ public class Biblioteca {
 
         int contador = 0;
 
-        while(it.next()) {
-            System.out.println(contador + " --> " + it.hasNext());
-            contador--;
+        while (it.hasNext()) {
+            System.out.println(contador + " --> " + it.next());
+            contador++;
         }
     }
 
