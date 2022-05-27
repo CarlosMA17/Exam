@@ -36,8 +36,8 @@ public class Main {
                 case"2":
                     System.out.println("Seleccione uno de los libros");
                     biblio.showCatalog();
-                    Scanner scP = new Scanner(System.in);
-                    int posicion = scP.nextInt();
+                    Scanner scPosicion = new Scanner(System.in);
+                    int posicion = scPosicion.nextInt();
                     usuario.obtenerLibro(posicion, biblio);
                     break;
                 case "3":
@@ -52,12 +52,14 @@ public class Main {
                 case"5":
                     System.out.println("Introduzca el numero del libro que quiere devolver");
                     System.out.println(usuario);
-                    int libroParaDevolver = sc.nextInt();
+                    scPosicion = new Scanner(System.in);
+                    int libroParaDevolver = scPosicion.nextInt();
                     String tituloLibro = usuario.obtenerTituloLibro(libroParaDevolver);
                     usuario.devolverLibro(tituloLibro, biblio);
                     break;
-                case "Q":
+                case "Q", "q":
                     salir = true;
+                    break;
             }
         }
     }
